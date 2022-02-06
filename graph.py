@@ -9,6 +9,8 @@
 #
 #     def search(self, searchValue):
 #
+#     def delete(self, deleteValue):
+#
 #     def minimum(self):
 #
 #     def maximum(self):
