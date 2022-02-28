@@ -24,5 +24,6 @@
 def driver(name):
     print(f"{name} Driver Code")
 
+
 if __name__ == "__main__":
     driver("Graph")

@@ -12,7 +12,7 @@ class BST:
         if self.value == newValue:  # ignoring duplicates
             return
 
-        if self.value > newValue:  # if we add >= we will be placing dupicates on the left
+        if self.value > newValue:  # if we add >= we will be placing duplicates on the left
             if self.left:
                 self.left.insert(newValue)
             else:
@@ -93,7 +93,7 @@ class BST:
                 self = None
                 return temp
 
-            # if node has 2 childs, either replace it with biggest value of left or smallest value of right
+            # if node has 2 children, either replace it with bigger value of left or smallest value of right
 
             '''
             # replacing with smallest value of right
@@ -106,11 +106,11 @@ class BST:
 
             '''
 
-            # replacing with biggest value of left
+            # replacing with bigger value of left
             node = self.left
             while node.right:
                 node = node.right
-            self.value = node.value  # update the value of the node with biggest left
+            self.value = node.value  # update the value of the node with bigger left
             self.left = self.left.delete(node.value)
 
         return self
@@ -132,6 +132,7 @@ def count(tree):
     if tree is None:
         return 0
     return 1 + count(tree.left) + count(tree.right)
+
 
 def driver(name):
     print(f"{name} Driver Code")
@@ -195,6 +196,7 @@ def driver(name):
         print("\n\nYou can't delete root of a tree containing only one node !")
     else:
         root.delete(100)
+
 
 if __name__ == "__main__":
     driver("BST")
